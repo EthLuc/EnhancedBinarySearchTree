@@ -11,8 +11,8 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
         
-        while (running) {
-            
+        //Prints the menu then uses switch cases for the user selecting options
+        while (running) {     
             System.out.println("Welcome to the Enhance BST Tester.");
             System.out.println("Here's the menu of our choices -");
             System.out.println("0) Quit");

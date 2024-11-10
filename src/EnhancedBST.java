@@ -3,7 +3,7 @@ import java.util.*;
 
 public class EnhancedBST extends BinarySearchTree {
 
-    // Method to build the BST from a file
+    //Method to build the BST from a file
     public void buildFromFile(String filename) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
@@ -24,7 +24,7 @@ public class EnhancedBST extends BinarySearchTree {
         }
     }
 
-    // Override the print method to show the tree in multiple traversals
+    //Overrides the print method to show the tree in different traversals
     @Override
     public void print() {
         System.out.print("Inorder: ");
@@ -38,6 +38,7 @@ public class EnhancedBST extends BinarySearchTree {
         System.out.println();
     }
 
+    //Methods for the different traversals
     private void printInOrder(Node node) {
         if (node == null) return;
         printInOrder(node.left);
@@ -59,7 +60,7 @@ public class EnhancedBST extends BinarySearchTree {
         System.out.print(node.data + " ");
     }
 
-    // Method to export the BST to a text file
+    //Method to export the BST to a text file
     public void exportToFile(String filename) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
@@ -79,12 +80,12 @@ public class EnhancedBST extends BinarySearchTree {
         exportInOrder(node.right, writer);
     }
 
-    // Method to get the root of the tree
+    //Method to get the root of the tree
     public Node getRoot() {
         return super.root;
     }
 
-    // Method to get the height of the tree
+    //Method to get the height of the tree
     public int getHeight() {
         return getHeight(getRoot());
     }
@@ -94,7 +95,7 @@ public class EnhancedBST extends BinarySearchTree {
         return Math.max(getHeight(node.left), getHeight(node.right)) + 1;
     }
 
-    // Method to calculate the internal path length of the tree
+    //Method to calculate the internal path length of the tree
     public int getInternalPathLength() {
         return getInternalPathLength(getRoot(), 0);
     }
@@ -104,7 +105,7 @@ public class EnhancedBST extends BinarySearchTree {
         return level + getInternalPathLength(node.left, level + 1) + getInternalPathLength(node.right, level + 1);
     }
 
-    // Method to count the absent children in the tree
+    //Method to count the absent children in the tree
     public int countAbsentChildren() {
         return countAbsentChildren(getRoot());
     }
@@ -114,7 +115,7 @@ public class EnhancedBST extends BinarySearchTree {
         return countAbsentChildren(node.left) + countAbsentChildren(node.right);
     }
 
-    // Method to check if a path sum exists in the tree
+    //Method to check if a path sum exists in the tree
     public boolean hasPathSum(int sum) {
         return hasPathSum(getRoot(), sum);
     }
