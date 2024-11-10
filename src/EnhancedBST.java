@@ -9,11 +9,11 @@ public class EnhancedBST extends BinarySearchTree {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
             String line;
             
-            // Read each line from the file and insert it into the tree
+            
             while ((line = reader.readLine()) != null) {
                 try {
-                    Comparable value = Integer.parseInt(line.trim()); // assuming the data in file is integers
-                    add(value); // Use the add method to insert into the tree
+                    Comparable value = Integer.parseInt(line.trim()); 
+                    add(value); 
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid data in file: " + line);
                 }
@@ -79,7 +79,7 @@ public class EnhancedBST extends BinarySearchTree {
         exportInOrder(node.right, writer);
     }
 
-    // Method to get the root of the tree (since root is private in BinarySearchTree)
+    // Method to get the root of the tree
     public Node getRoot() {
         return super.root;
     }

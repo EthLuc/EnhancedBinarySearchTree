@@ -5,7 +5,7 @@
 */
 public class BinarySearchTree
 {  
-    private Node root;
+    Node root;
 
    /**
       Constructs an empty tree.

@@ -12,7 +12,7 @@ public class UserInterface {
         boolean running = true;
         
         while (running) {
-            // Show menu options
+            
             System.out.println("Welcome to the Enhance BST Tester.");
             System.out.println("Here's the menu of our choices -");
             System.out.println("0) Quit");
@@ -28,7 +28,7 @@ public class UserInterface {
             System.out.print("Enter your choice: ");
             
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline character
+            scanner.nextLine();
             
             switch (choice) {
                 case 0:
